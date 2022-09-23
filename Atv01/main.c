@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-void tabuada(n1, n2){
+void tabuada(int n1, int n2){
   for (n2; n2 <= 10; n2++){
     printf("%d x %d = %d\n", n1, n2, n1*n2);
   }
