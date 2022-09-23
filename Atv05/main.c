@@ -1,30 +1,32 @@
 #include <stdio.h>
 #include <locale.h>
 
-void digitos(char str[], int i){
-  while (str[i] != '\0'){
-    i++;
-  }
-}
-
 int main(){
   setlocale(LC_ALL, "portuguese");
 
+  struct{
   char nome[50], email[50], tel[15];
-  int total=0;
-  printf("Digite um nome: ");
-  scanf("%s", nome);
-  printf("Digite um e-mail: ");
-  scanf("%s", email);
-  printf("Digite um telefone: ");
-  scanf("%s", tel);
-  printf("----------------------------------------\n");
-  digitos(nome, total);
-  printf("Nome: %d dígitos\n");
-  digitos(email, total);
-  printf("E-mail: %d dígitos\n");
-  digitos(tel, total);
-  printf("Telefone: %d dígitos\n");
+  }Dados;
+  int digNome = 0, digEmail = 0, digTel = 0;
+  printf("Insira um nome: ");
+  scanf("%s", Dados.nome);
+  printf("Insira um e-mail: ");
+  scanf("%s", Dados.email);
+  printf("Insira um telefone: ");
+  scanf("%s", Dados.tel);
+  printf("----------------------------------------------------\n");
+  while (Dados.nome[digNome] != '\0'){
+    digNome++;
+  }
+  printf("Nome: %d dígitos\n", digNome);
+  while (Dados.email[digEmail] != '\0'){
+    digEmail++;
+  }
+  printf("E-mail: %d dígitos\n", digEmail);
+  while (Dados.tel[digTel] != '\0'){
+    digTel++;
+  }
+  printf("Telefone: %d dígitos\n", digTel);
 
   return 0;
 }
